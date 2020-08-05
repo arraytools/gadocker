@@ -1,0 +1,25 @@
+Package: gadocker
+Title: Testing Github Actions
+Version: 0.1.1
+Authors@R: 
+    person(given = "arraytools",
+           family = "brb",
+           role = c("aut", "cre"),
+           email = "arraytools@gmail.com",
+           comment = c(ORCID = "your-orc-id-here"))
+Description: This package serves as a template for using github actions to 
+    prepare a Bioconductor Workshop package for use. In particular,
+    a pkgdown website and docker image are generated based on workflow 
+    settings. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Depends: 
+    Biobase
+Suggests: 
+    knitr,
+    rmarkdown,
+    pkgdown
+VignetteBuilder: knitr
