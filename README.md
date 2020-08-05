@@ -1,7 +1,6 @@
-# Workshop2020
+# Workshop
 
-This package is a template for building a workshop material. The package
-includes Github actions to:
+This package is modified from https://github.com/seandavi/BuildABiocWorkshop2020 for building a workshop material. The package includes Github actions to:
 
 1. Set up bioconductor/bioconductor_docker:devel on Github resources
 2. Install package dependencies for your package (based on the `DESCRIPTION` file)
