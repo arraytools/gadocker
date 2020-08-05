@@ -1,7 +1,7 @@
 ---
 title: "How To Build A Workshop Package"
 subtitle: "In other words, how do I use what's here"
-author: Sean Davis^[seandavi@gmail.com]
+author: arraytools^[arraytools@gmail.com]
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{How to Use this Package to Build a Bioc Workshop}
@@ -33,7 +33,7 @@ To accomplish this follow each of the 7 steps below. Once your edit the yaml fil
 Clone this repo, fork and **rename** it, or create a repo from this template
 
 ```
-git clone https://github.com/seandavi/BuildABiocWorkshop2020 MYPKGDIR
+git clone https://github.com/arraytools/gadocker MYPKGDIR
 ```
 
 ### 2. Edit `DESCRIPTION` file
@@ -57,7 +57,7 @@ Suggests:
 ### 3. Set up a website (Github Pages)
 In your repository, click on settings or url https://github.com/<github username>/<workshop repos name>/settings.  Midway down the page, in the GitHub Pages section, select source 'gh-pages branch'.  If only 'master branch' is visible, select master for now, but once Github actions runs, 'gh-pages branch' will be available and is required to render the website. 
   
-In the DESCRIPTION file, update the URL: to the website url eg https://seandavi.github.io/BuildABiocWorkshop2020/
+In the DESCRIPTION file, update the URL: to the website url eg https://arraytools.github.io/gadocker/
 
 ### 4. Edit _pkgdown.yml
 Edit the file _pkgdown.yml, updating the url:, title and href: which should be your website url, title of your workshop and github repos url respectively.  You do not need to edit this file further. You do not need to add menus or links to vignettes. GitHub Actions and pkgdown will do this when it builds the website
@@ -77,7 +77,7 @@ You do not need to create a docker image manually. Github actions will read Dock
           password: ${{ secrets.DOCKER_PASSWORD }}
           # change the next line to reflect the name
           # of YOUR dockerhub repository
-          repository: seandavi/buildabiocworkshop2020
+          repository: arraytools/gadocker
           tag_with_ref: true
           tag_with_sha: true
           tags: latest

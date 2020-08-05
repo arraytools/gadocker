@@ -1,6 +1,6 @@
 ---
 title: "An Example Workshop"
-author: Sean Davis^[seandavi@gmail.com]
+author: arraytools^[arraytools@gmail.com]
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{An Example Workshop}
