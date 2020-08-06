@@ -93,7 +93,7 @@
 <div id="workshop" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#workshop" class="anchor"></a>Workshop</h1></div>
-<p>This package is modified from <a href="https://github.com/seandavi/BuildABiocWorkshop2020" class="uri">https://github.com/seandavi/BuildABiocWorkshop2020</a> for building a workshop material. The package includes Github actions to:</p>
+<p>This package is modified from <a href="https://github.com/seandavi/BuildABiocWorkshop2020">here</a> for building a workshop material. The package includes Github actions to:</p>
 <ol>
 <li>Set up bioconductor/bioconductor_docker:devel on Github resources</li>
 <li>Install package dependencies for your package (based on the <code>DESCRIPTION</code> file)</li>
@@ -130,10 +130,10 @@
 <div id="to-use-the-resulting-image" class="section level2">
 <h2 class="hasAnchor">
 <a href="#to-use-the-resulting-image" class="anchor"></a>To use the resulting image:</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">docker</span> run -e PASSWORD=<span class="op">&lt;</span>choose_a_password_for_rstudio<span class="op">&gt;</span> -p 8787:8787 YOURDOCKERIMAGENAME</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">docker</span> run -e PASSWORD=<span class="op">&lt;</span>choose_a_password_for_rstudio<span class="op">&gt;</span> -p 8787:8787 -d --rm YOURDOCKERIMAGENAME</span></code></pre></div>
 <p>Once running, navigate to <a href="https://localhost:8787/" class="uri">https://localhost:8787/</a> and then login with <code>rstudio</code>:<code>yourchosenpassword</code>.</p>
 <p>To try with <strong>this</strong> repository docker image:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">docker</span> run -e PASSWORD=abc -p 8787:8787 arraytools/gadocker</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">docker</span> run -e PASSWORD=abc -p 8787:8787 -d --rm arraytools/gadocker</span></code></pre></div>
 <p><em>NOTE</em>: Running docker that uses the password in plain text like above exposes the password to others in a multi-user system (like a shared workstation or compute node). In practice, consider using an environment variable instead of plain text to pass along passwords and other secrets in docker command lines.</p>
 </div>
 </div>
