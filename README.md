@@ -1,6 +1,6 @@
 # Workshop
 
-This package is modified from https://github.com/seandavi/BuildABiocWorkshop2020 for building a workshop material. The package includes Github actions to:
+This package is modified from [here](https://github.com/seandavi/BuildABiocWorkshop2020) for building a workshop material. The package includes Github actions to:
 
 1. Set up bioconductor/bioconductor_docker:devel on Github resources
 2. Install package dependencies for your package (based on the `DESCRIPTION` file)
@@ -30,14 +30,14 @@ For detailed instructions, see the `How to build a workshop` article/vignette.
 ## To use the resulting image:
 
 ```sh
-docker run -e PASSWORD=<choose_a_password_for_rstudio> -p 8787:8787 YOURDOCKERIMAGENAME
+docker run -e PASSWORD=<choose_a_password_for_rstudio> -p 8787:8787 -d --rm YOURDOCKERIMAGENAME
 ```
 Once running, navigate to https://localhost:8787/ and then login with `rstudio`:`yourchosenpassword`. 
 
 To try with **this** repository docker image:
 
 ```sh
-docker run -e PASSWORD=abc -p 8787:8787 arraytools/gadocker
+docker run -e PASSWORD=abc -p 8787:8787 -d --rm arraytools/gadocker
 ```
 
 *NOTE*: Running docker that uses the password in plain text like above exposes the password to others 
